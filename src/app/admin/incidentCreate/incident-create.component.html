@@ -1,0 +1,28 @@
+<h2>Create Incident</h2>
+<div class="container">
+  <form>
+  <div class="row">
+    <div class="col-25">
+      <label for="fname">Incident title</label>
+    </div>
+    <div class="col-75">
+      <input type="text" style="width: 450px;height: 30px;" [(ngModel)]="incidentTitle" name="incidentTitle" required #psTitle="ngModel">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="subject">Content</label>
+    </div>
+    <div class="col-75">
+      <textarea style="width: 600px" rows="15" id="content" [(ngModel)]="incidentContent" name="incidentContent" required #psContent="ngModel" placeholder="Brief your issue here
+ 1.Affected services.
+ 2.No of users affected" style="height:200px"></textarea>
+    </div>
+  </div>
+  <div class="row" class="btn">
+    <button style="background-color: green; color:white"class="success" type="button" [disabled]="!psTitle.valid || !psContent.valid" 
+                         (click)="createIncident()">Create</button>
+                        <button style="background-color: red; color:white" class="cancel" type="button" (click)="cancel()">Cancel</button>
+  </div>
+  </form>
+</div>

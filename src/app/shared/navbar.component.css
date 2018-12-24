@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+.top-bar {
+    background-color: black;
+    padding: 0%;
+    margin: 0%;
+    height: 50px;
+    width: 100%;
+}
+
+.top-bar .logo {
+    position: absolute;
+    top:0%;
+    left:2%;
+    display: block;
+    width: 100px;
+    height: 55px;
+}
+
+.top-bar-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 32px;
+    color:wheat;
+    text-align: center;
+    padding-top: 2px;
+}
+
+.nav-menu a {
+    color:wheat;
+    font-family: 'Roboto',sans-serif;
+    text-decoration: none;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    font-size: 15px;
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: inline;
+}
+.button {
+    background-color: black; /* Green */
+    border-radius: 8px;
+    color:white;
+    padding: 10px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size:18px;
+    align-content:flex-end;
+    margin-right: 10px;
+    
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-family: 'Roboto',sans-serif;
+}
+
+.button1 {
+    background-color:wheat; 
+    color: black; 
+    border: 2px solid black;
+    float: right;
+}
+
+.button1:hover {
+    background-color: white;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:white;
+    font-family: 'Roboto',sans-serif;
+    color: wheat;
+}
+
+li {
+    float: left;
+    height:5%;
+    width:25%;
+    font-family: 'Roboto',sans-serif;
+}
+
+li a {
+    display: block;
+    color:white;
+    text-align: center;
+    padding: 24px 26px;
+    text-decoration: none;
+}
+
+.anchy{
+    padding:0px;
+}
+
+li a:hover {
+    background-color:black;
+}

@@ -1,0 +1,48 @@
+<h2>Create Service request</h2>
+
+<div class="container">
+  <form>
+  <div class="row">
+    <div class="col-25">
+      <label for="fname">Request for</label>
+    </div>
+    <div class="col-75">
+      <input type="text" style="width: 450px;height: 18px;"  [(ngModel)]="cfgrequestfor" name="cfgrequestfor" required #psrequestfor="ngModel">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="country">Request type</label>
+    </div>
+    <div class="col-75">
+      <select type="text" style="width: 450px ;height: 20px;" [(ngModel)]="cfgtype" name="cfgtype" required #psTitle="ngModel">
+        <option value="Information"><button style="cursor: pointer" class="btn" type="text" [(ngModel)]="cfgtype" name="cfgtype" required #psTitle="ngModel">Information</button></option>
+                    <option value="Accountcreation"><button style="cursor: pointer" class="btn btn2" type="text" [(ngModel)]="cfgtype" name="cfgtype" required #psTitle="ngModel">Account creation</button></option>
+                    <option value="Softwareinstallation"><button style="cursor: pointer" class="btn btn3" type="text" [(ngModel)]="cfgtype" name="cfgtype" required #psTitle="ngModel">Software installation</button></option>
+                    <option value="Add/removeuser"><button style="cursor: pointer" class="btn btn4" type="text" [(ngModel)]="cfgtype" name="cfgtype" required #psTitle="ngModel">Add/remove user</button></option>
+      </select>
+    </div>
+  </div>
+ <div class="row">
+    <div class="col-25">
+      <label for="lname">Resource ID</label>
+    </div>
+    <div class="col-75">
+      <input type="text" style="width: 450px ;height: 20px;" [(ngModel)]="cfgresource" name="cfgresource" required #psTitle="ngModel">
+    </div>
+  </div> 
+  <div class="row">
+    <div class="col-25">
+      <label for="subject">Description</label>
+    </div>
+    <div class="col-75">
+      <textarea rows="10" id="Description" style="width: 450px" [(ngModel)]="cfgDescription" name="cfgDescription" required #psDescription="ngModel" placeholder="Other details"></textarea>
+    </div>
+  </div>
+  <div class="row" class="btn">
+    <button class="success" type="button" [disabled]="!psrequestfor.valid || !psDescription.valid" 
+                         (click)="createcfg()">Create</button>
+                         <a [routerLink]="['/admin']"> <button class="cancel" type="button" (click)="cancel()">Cancel</button></a>
+  </div>
+  </form>
+</div>
